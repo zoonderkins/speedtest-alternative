@@ -10,6 +10,9 @@ import (
 	"github.com/dustin/go-humanize"
 )
 
+const version = "0.0.1"
+const supportProvider = "Linode"
+
 func downloadWithProgress(url string) error {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -56,11 +59,8 @@ func (pt *progressTracker) Write(p []byte) (n int, err error) {
 	return n, nil
 }
 
-const version = "0.0.1"
-const supportProvider = "Linode"
-
 func printUsage() {
-	fmt.Println(`Usage: ./my_project [option]
+	fmt.Println(`Usage: ./speedtest-alternative [option]
 
 Options:
 	-h, --help      Show help information

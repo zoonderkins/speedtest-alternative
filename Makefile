@@ -32,5 +32,8 @@ build-darwin-amd64:
 build-darwin-arm64:
 	GOOS=darwin GOARCH=arm64 $(GOBUILD) -o build/$(BINARY_NAME)-darwin-arm64 -v
 
+build-windows-amd64:
+	GOOS=windows GOARCH=amd64 $(GOBUILD) -o build/$(BINARY_NAME)-windows-amd64.exe -v
+
 deps:
 	$(GOGET) ./...

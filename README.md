@@ -39,6 +39,10 @@ make build-linux-amd64
 make build-darwin-amd64
 # to cross-compile for macOS with ARM64 (M1/M2 chips).
 make build-darwin-arm64 
+# to cross-compile for Windows with AMD64.
+make build-windows-amd64
+# to build for all platforms.
+make build-all
 ```
 
 
